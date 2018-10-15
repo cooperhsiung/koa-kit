@@ -1,15 +1,14 @@
 module.exports = {
-  hello: async ctx => {
-    ctx.body = "hello";
+  hello: () => {
+    return 'hello';
   },
-  sleep: async ctx => {
+  sleep: async () => {
     await sleep();
-    ctx.body = "sleep 1s";
+    return 'sleep 1s';
   },
-  login: async ctx => {
-    const data = await { code: 0, name: "bob" };
-    ctx.body = data;
-  }
+  login: async () => {
+    return await { code: 0, name: 'bob' };
+  },
 };
 
 function sleep() {

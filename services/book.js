@@ -1,10 +1,8 @@
 module.exports = {
-  all: async ctx => {
-    const data = await [{ id: 1, name: "nodejs in action" }]; // mock data
-    ctx.body = data;
+  all: async () => {
+    return [{ id: 1, name: 'nodejs in action' }]; // mock data
   },
-  query: async ctx => {
-    const data = await { id: 1, name: "nodejs in action" };
-    ctx.body = data;
-  }
+  query: async () => {
+    return { id: 1, name: 'nodejs in action' };
+  },
 };
